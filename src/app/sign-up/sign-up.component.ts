@@ -17,10 +17,10 @@ export class SignUpComponent {
   }
   usernameValidate() {}
 
-  loginData: form[] = [];
+  signUpData: form[] = [];
   createUser() {
-    this.loginData.push({ ...this.form });
-    console.log(this.loginData);
+    this.signUpData.push({ ...this.form });
+    console.log(this.signUpData);
     
     this.resetForm();
   }
