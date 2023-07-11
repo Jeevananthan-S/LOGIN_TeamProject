@@ -9,4 +9,11 @@ import { form } from './type';
 export class AppComponent {
   title = 'LOGIN_TeamProject';
   form:form={} as form;
+  // public password:string|number=this.form.password;
+isSame:boolean=false;
+  check(){
+    if(this.form.password===this.form.confirmPassword){
+      this.isSame=true;
+    }
+  }
 }
