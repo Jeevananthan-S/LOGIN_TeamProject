@@ -17,13 +17,13 @@
   <div class="confirmPassword my-3">
       <!--   jaiganesh 11/07/2023 created confrim Password tag -->
     <label for="inputPassword5" class="form-label">Confirm Password</label>
-    <input type="password" id="inputPassword5" class="form-control" [(ngModel)]="form.confirmPassword" aria-labelledby="passwordHelpBlock">
+    <input type="password" id="inputPassword5" class="form-control" [(ngModel)]="form.confirmPassword" (keyup)="check()" aria-labelledby="passwordHelpBlock">
   </div>
   {{form.confirmPassword}}
   <div class="terms">
      <!--   jaiganesh 11/07/2023 created checkbox tag -->
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" [checked]="isSame">
       <label class="form-check-label" for="flexCheckDefault">
         Terms and conditions
       </label>
