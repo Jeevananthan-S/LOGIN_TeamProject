@@ -2,4 +2,7 @@
     border: 2px solid gray;
     border-radius: 35px;
     padding: 25px;
+    box-shadow: 20px 20px 20px rgb(161, 158, 158);
+    background-color: black;
+    color: tomato;
 }
