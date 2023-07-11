@@ -1,0 +1,8 @@
+.sect1{
+    border: 2px solid gray;
+    border-radius: 35px;
+    padding: 25px;
+    box-shadow: 20px 20px 20px rgb(161, 158, 158);
+    background-image: linear-gradient(rgba(15, 15, 15, 0.87) , rgba(3, 3, 3, 0.842));
+    color: tomato;
+}

@@ -1,41 +1,8 @@
 <!-- **********************Jeeva 11/07/2023 Create html file - separated works accordingly***************************** -->
-<section class="container my-5 sect1" style="width: 30%;">
-  <form #Myform="ngForm">
-    <div class="username my-3">
-      <!-- Jeeva 11/07/2023 Create username input tag -->
-      <label class="form-label">Username</label>
-      <input type="text" class="form-control" name="username" [(ngModel)]="form.username" pattern="[a-zA-Z.]*"
-        (change)="usernameValidate()" aria-label="Username" required>
-    </div>
 
-
-    <div class="password my-3">
-      <!-- Gokul 11/07/2023 created password input tag -->
-      <label for="inputPassword5" class="form-label">Password</label>
-      <input type="password" id="inputPassword5" name="password" class="form-control" [(ngModel)]="form.password"
-        aria-labelledby="passwordHelpBlock" required>
-    </div>
-    <!-- {{form.password}} -->
-    <div class="confirmPassword my-3">
-      <!--   jaiganesh 11/07/2023 created confrim Password tag -->
-      <label for="ConfirmPassword5" class="form-label">Confirm Password</label>
-      <input type="password" id="ConfirmPassword5" name="confirmPassword" class="form-control"
-        [(ngModel)]="form.confirmPassword" (keyup)="check()" aria-labelledby="passwordHelpBlock" required>
-    </div>
-    <!-- {{form.confirmPassword}} -->
-    <div class="terms">
-      <!--   jaiganesh 11/07/2023 created checkbox tag -->
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" [checked]="isSame" required disabled> 
-        <label class="form-check-label" for="flexCheckDefault">
-          Terms and conditions
-        </label>
-      </div>
-    </div>
-
-    <div class="button my-3">
-      <!--  jaiganesh 11/07/2023 created submit button  -->
-      <button type="button" *ngIf="Myform.valid && isSame" class="btn btn-outline-success" (click)="createUser()">submit</button>
-    </div>
-  </form>
+<section class="container my-5 mainsec">
+  <mat-tab-group animationDuration="1000ms" dynamicHeight>
+    <mat-tab label="First"><app-sign-up></app-sign-up></mat-tab>
+    <mat-tab label="Second"><app-log-in></app-log-in></mat-tab>
+  </mat-tab-group>
 </section>
