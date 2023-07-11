@@ -19,7 +19,7 @@
     <label for="inputPassword5" class="form-label">Confirm Password</label>
     <input type="password" id="inputPassword5" class="form-control" [(ngModel)]="form.confirmPassword" (keyup)="check()" aria-labelledby="passwordHelpBlock">
   </div>
-  {{form.confirmPassword}}
+  
   <div class="terms">
      <!--   jaiganesh 11/07/2023 created checkbox tag -->
     <div class="form-check">
@@ -32,7 +32,7 @@
 
     <div class="button my-3">
       <!--  jaiganesh 11/07/2023 created submit button  -->
-     <button type="button" class="btn btn-outline-success">submit</button>
+     <button type="button" class="btn btn-outline-success" (click)="createUser()">submit</button>
   </div>
 
 </section>
