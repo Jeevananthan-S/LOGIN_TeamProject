@@ -28,6 +28,7 @@ export class SignUpComponent {
   resetForm() {
     this.form = {
       username: '',
+      email:'',
       password: '',
       confirmPassword: '',
     };
