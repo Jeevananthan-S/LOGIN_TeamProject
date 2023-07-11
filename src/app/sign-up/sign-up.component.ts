@@ -26,12 +26,13 @@ export class SignUpComponent {
   }
 
   resetForm() {
-    this.form = {
-      username: '',
-      email:'',
-      password: '',
-      confirmPassword: '',
-    };
+    // this.form = {
+    //   username: '',
+    //   email:'',
+    //   password: '',
+    //   confirmPassword: '',
+    // };
+    this.form={} as form;
     this.isSame = false;
   }
 }
