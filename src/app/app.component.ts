@@ -16,4 +16,18 @@ isSame:boolean=false;
       this.isSame=true;
     }
   }
+  loginData: form[] = [];
+  createUser(){
+    this.loginData.push({ ...this.form });
+    this.resetForm();
+  }
+  resetForm()
+  {
+    this.form = {
+      username:'',
+      password:'',
+      confirmPassword:'',
+      
+  };this.isSame=false;
+  }
 }
