@@ -1,8 +1,21 @@
-<section class="container">
-    <div class="email">
-
-    </div>
-    <div class="password">
-        
-    </div>
-</section>
+<section class="container my-5 sect1" style="width: 30%;">
+    <h2>Log In </h2>
+    <hr>
+    <form #MyForm="ngForm">
+      <div class="email">
+         <!-- Gokul 11/07/2023 created email input tag -->
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" pattern="[a-zA-Z.@]*" required>
+      </div>
+      <div class="password my-3">
+        <!-- Gokul 11/07/2023 created password input tag -->
+        <label for="inputPassword5" class="form-label">Password</label>
+        <input type="password" id="inputPassword5" name="password" class="form-control" 
+          aria-labelledby="passwordHelpBlock" required>
+      </div>
+      <div class="button my-3">
+        <!--  jaiganesh 11/07/2023 created submit button  -->
+        <button type="button"  class="btn btn-outline-success" >LogIn</button>
+      </div>
+    </form>
+  </section>
