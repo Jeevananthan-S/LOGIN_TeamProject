@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { form } from './type';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'LOGIN_TeamProject';
+  form:form={} as form;
 }
