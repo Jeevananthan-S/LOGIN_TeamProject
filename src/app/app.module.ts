@@ -7,6 +7,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LogInComponent } from './log-in/log-in.component';
+import {MatIconModule} from '@angular/material/icon';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,8 +20,8 @@ import { LogInComponent } from './log-in/log-in.component';
     AppRoutingModule,
     FormsModule,
     MatTabsModule,
-    BrowserAnimationsModule
-    
+    BrowserAnimationsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
