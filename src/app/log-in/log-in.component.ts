@@ -13,6 +13,8 @@ export class LogInComponent {
   login(){
     this.logInData.push(this.form);
     // console.log(this.logInData);
-    this.checkEvent.emit(this.logInData)
+    this.form={} as logIn;
+    this.checkEvent.emit(this.logInData);
+    this.logInData=[];
   }
 }
