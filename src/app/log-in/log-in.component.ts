@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Output,EventEmitter } from '@angular/core';
 import { logIn } from './logIntype';
 
 @Component({
@@ -9,9 +9,10 @@ import { logIn } from './logIntype';
 export class LogInComponent {
   form:logIn={} as logIn;
   logInData:logIn[] = [];
+  @Output() public checkEvent=new EventEmitter();
   login(){
     this.logInData.push(this.form);
-    console.log(this.logInData);
-    
+    // console.log(this.logInData);
+    this.checkEvent.emit(this.logInData)
   }
 }

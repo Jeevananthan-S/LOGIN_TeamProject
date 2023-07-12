@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Output,EventEmitter } from '@angular/core';
 import { form } from '../type';
 
 @Component({
@@ -7,7 +7,8 @@ import { form } from '../type';
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent {
-  regex: string = '[a-zA-Z. ]*';
+  @Output() public dataEvent=new EventEmitter();
+  // regex: string = '[a-zA-Z. ]*';
   form: form = {} as form;
   // public password:string|number=this.form.password;
   isSame: boolean = false;
@@ -21,7 +22,7 @@ export class SignUpComponent {
   createUser() {
     this.signUpData.push({ ...this.form });
     console.log(this.signUpData);
-    
+    this.dataEvent.emit(this.signUpData);
     this.resetForm();
   }
 
