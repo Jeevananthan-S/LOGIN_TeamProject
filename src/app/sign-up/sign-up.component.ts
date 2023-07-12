@@ -13,8 +13,7 @@ export class SignUpComponent {
   // public password:string|number=this.form.password;
   isSame: boolean = false;
   check() {
-    this.isSame =
-      this.form.password === this.form.confirmPassword ? true : false;
+    this.isSame = this.form.password === this.form.confirmPassword ? true : false;
   }
   usernameValidate() { }
 

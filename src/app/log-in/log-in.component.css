@@ -3,6 +3,8 @@
     border-radius: 35px;
     padding: 25px;
     box-shadow: 20px 20px 20px rgb(161, 158, 158);
-    background-image: linear-gradient(rgba(15, 15, 15, 0.87) , rgba(3, 3, 3, 0.842));
-    color: tomato;
+    background-image: linear-gradient(rgba(6, 6, 48, 0.842) , rgba(5, 24, 43, 0.856));
+
+      color: rgb(190, 182, 181);
+
 }

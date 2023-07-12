@@ -2,5 +2,6 @@
     width: 90%;
     border: 2px solid gray;
     border-radius: 35px;
-    box-shadow: 20px 20px 20px rgb(161, 158, 158);
+    background-image: linear-gradient(white,tan);
+    box-shadow: 20px 20px 20px rgb(212, 212, 212);
 }
