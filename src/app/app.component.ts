@@ -29,7 +29,7 @@ public invalid:number=0;
       } 
     }
     if(this.invalid===0){
-      alert("Invalid Data");
+      alert("Invalid Data First SignUp");
       
       
       
