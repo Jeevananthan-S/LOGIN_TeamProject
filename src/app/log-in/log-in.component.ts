@@ -9,7 +9,9 @@ import { logIn } from './logIntype';
 export class LogInComponent {
   form:logIn={} as logIn;
   logInData:logIn[] = [];
+  
   @Output() public checkEvent=new EventEmitter();
+  
   login(){
     this.logInData.push(this.form);
     // console.log(this.logInData);
