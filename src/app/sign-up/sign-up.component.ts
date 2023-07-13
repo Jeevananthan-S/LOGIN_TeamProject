@@ -18,6 +18,11 @@ export class SignUpComponent {
     this.isSame =
       this.form.password === this.form.confirmPassword ? true : false;
   }
+  checkPasswordMatch(){
+    if(!this.isSame){
+      this.toast.error({detail:"Password Doesnot match",summary:"Enter Correct Confirm Password",duration:5000})
+    }
+  }
   usernameValidate() {}
   constructor(private toast: NgToastService) {}
 
@@ -52,6 +57,9 @@ export class SignUpComponent {
         });
         this.SameEmail = false;
         this.resetForm();
+      }
+      else{
+        this.SameEmail=true;
       }
     }
   }

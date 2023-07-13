@@ -27,7 +27,7 @@
         <!--   jaiganesh 11/07/2023 created confrim Password tag -->
         <label for="ConfirmPassword5" class="form-label">Confirm Password</label>
         <input type="password" id="ConfirmPassword5" name="confirmPassword" class="form-control"
-          [(ngModel)]="form.confirmPassword" minlength="4" (keyup)="check()" aria-labelledby="passwordHelpBlock" required>
+          [(ngModel)]="form.confirmPassword" minlength="4" (keyup)="check()" (change)="checkPasswordMatch()" aria-labelledby="passwordHelpBlock" required>
       </div>
       <!-- {{form.confirmPassword}} -->
       <div class="terms">
