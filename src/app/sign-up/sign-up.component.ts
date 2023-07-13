@@ -52,8 +52,8 @@ export class SignUpComponent {
     for (let x: number = 0; x < this.signUpData.length; x++) {
       if (this.form.email === this.signUpData[x].email) {
         this.toast.error({
-          detail: 'Email ID Already Exist',
-          summary: 'Enter Different Email ID or Go to LogIN page',
+          detail: 'Email ID already exist',
+          summary: 'Enter different email ID or go to LogIn page',
           sticky: true,
           duration: 3000,
         });
