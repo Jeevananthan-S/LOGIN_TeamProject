@@ -1,8 +1,6 @@
 <!-- **********************Jeeva 11/07/2023 Create html file - separated works accordingly***************************** -->
-<div class="container">
-<img src="" alt="Login" >
-</div>
-<section class="container my-5 sect1" style="width: 30%;">
+
+<section class="container my-5 sect1" style="width: 70%;">
   <h1><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="login"></mat-icon>Log In </h1>
   <hr>
   <form #MyForm="ngForm">
@@ -18,9 +16,22 @@
       <input type="password" id="inputPassword5" name="password" [(ngModel)]="form.password" class="form-control"
         aria-labelledby="passwordHelpBlock" required>
     </div>
+    <div class="password my-3">
+      <!-- Jeeva 11/07/2023 created texts -->
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" > 
+        <label class="form-check-label" for="flexCheckDefault">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas optio porro omnis dolore nihil! Officia, adipisci vel perferendis perspiciatis delectus repudiandae, quos harum rem libero voluptatibus consequuntur, repellat tempora inventore.
+        </label>
+      </div>
+    </div>
     <div class="button my-3">
       <!--  jaiganesh 11/07/2023 created submit button  -->
       <button type="button" *ngIf="MyForm.valid" (click)="login()" class="btn btn-outline-success">LogIn</button>
     </div>
+  <div *ngIf="false">
+    <a  routerLink="/sign-up-component" routerLinkActive="active" ariaCurrentWhenActive="page">SignUp Here</a>
+    <router-outlet></router-outlet>
+  </div>
   </form>
 </section>

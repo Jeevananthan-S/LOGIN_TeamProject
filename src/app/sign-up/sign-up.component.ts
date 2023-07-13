@@ -1,5 +1,6 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { form } from '../type';
+import { NgToastService } from 'ng-angular-popup';
 
 @Component({
   selector: 'app-sign-up',
@@ -16,11 +17,14 @@ export class SignUpComponent {
     this.isSame = this.form.password === this.form.confirmPassword ? true : false;
   }
   usernameValidate() { }
+  constructor(private toast: NgToastService){}
 
   signUpData: form[] = [];
+
   createUser() {
     this.signUpData.push(this.form);
     console.log(this.signUpData);
+    this.toast.success({detail:"SignedUp",summary:"Hurray!! You have SignedUp successfully! Now Login with your credentials",duration:3000});
     this.dataEvent.emit(this.signUpData);
     this.resetForm();
   }
