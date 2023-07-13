@@ -1,6 +1,8 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { form } from '../type';
 import { NgToastService } from 'ng-angular-popup';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-sign-up',
@@ -24,7 +26,7 @@ export class SignUpComponent {
     }
   }
   usernameValidate() {}
-  constructor(private toast: NgToastService) {}
+  constructor(private toast: NgToastService,public dialog: MatDialog) {}
 
   signUpData: form[] = [];
 
@@ -63,4 +65,18 @@ export class SignUpComponent {
       }
     }
   }
+
+  openDialog() {
+    this.dialog.open(TermsCondition);
+  }
 }
+
+
+
+@Component({
+  selector: 'terms-Condition',
+  templateUrl: './terms-condition.html',
+  standalone: true,
+  imports: [MatDialogModule, MatButtonModule],
+})
+export class TermsCondition {}

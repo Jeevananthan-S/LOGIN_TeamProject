@@ -33,9 +33,9 @@
       <div class="terms">
         <!--   jaiganesh 11/07/2023 created checkbox tag -->
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" [checked]="isSame" required disabled> 
-          <label class="form-check-label" for="flexCheckDefault">
-            Terms and conditions
+          <input class="form-check-input" (click)="openDialog()" type="checkbox" value="" id="flexCheckDefault" [checked]="isSame" required > 
+          <label class="form-check-label" for="flexCheckDefault" >
+            <a >Terms and conditions</a>
           </label>
         </div>
       </div>

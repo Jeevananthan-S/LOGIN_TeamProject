@@ -10,6 +10,8 @@ import { LogInComponent } from './log-in/log-in.component';
 import {MatIconModule} from '@angular/material/icon';
 import { NgToastModule } from 'ng-angular-popup';
 import { SuccessPageComponent } from './success-page/success-page.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatButtonModule} from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,9 @@ import { SuccessPageComponent } from './success-page/success-page.component';
     MatTabsModule,
     BrowserAnimationsModule,
     MatIconModule,
-    NgToastModule
+    NgToastModule,
+    MatButtonModule, MatDialogModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
