@@ -9,11 +9,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LogInComponent } from './log-in/log-in.component';
 import {MatIconModule} from '@angular/material/icon';
 import { NgToastModule } from 'ng-angular-popup';
+import { SuccessPageComponent } from './success-page/success-page.component';
 @NgModule({
   declarations: [
     AppComponent,
     SignUpComponent,
     LogInComponent,
+    SuccessPageComponent,
     
   ],
   imports: [
