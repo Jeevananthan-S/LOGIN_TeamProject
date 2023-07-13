@@ -2,7 +2,7 @@
     width: 90%;
     border: 2px solid gray;
     border-radius: 35px;
-    background-image: linear-gradient(white,tan);
+    background-image: linear-gradient(white,rgb(255, 255, 255));
     box-shadow: 20px 20px 20px rgb(212, 212, 212);
     /* background-image: url('../assets/lap.png'); */
     /* background-size: cover; */
@@ -14,7 +14,7 @@
     /* left: 0px;
     top: 0px; */
     /* z-index: -1; */
-    width: 200%;
+    width: 120%;
     height: 100%;
     /* padding-bottom: ; */
     /* -webkit-filter: blur(5px); Safari 6.0 - 9.0 */
