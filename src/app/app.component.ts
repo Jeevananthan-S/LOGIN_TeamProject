@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { form } from './type';
 import { logIn } from './log-in/logIntype';
 import { NgToastService } from 'ng-angular-popup';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,7 @@ export class AppComponent {
 
   signUpData: form[] = [];
 
-  constructor(private toast: NgToastService){}
+  constructor(private toast: NgToastService,private router: Router){}
 
   storeData(signUp: form[]) {
     this.signUpData = signUp;
@@ -30,6 +31,7 @@ public invalidPassword:number=0;
         if (login[0].password === this.signUpData[x].password) {
           this.toast.success({detail:"LOGGED IN",summary:"Hurray!! You have logged-in successfully",duration:3000});
           this.invalid++;
+          this.router.navigate(['/successPage']);
         }
         else{
           console.log("wrong");

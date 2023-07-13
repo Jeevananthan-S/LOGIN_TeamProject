@@ -1,6 +1,7 @@
 <!-- **********************Jeeva 11/07/2023 Create html file - separated works accordingly***************************** -->
-
-<section class="container my-5 mainsec">
+<router-outlet></router-outlet>
+{{invalid ===1}}
+<section *ngIf="invalid === 0" class="container my-5 mainsec">
   <mat-tab-group class="container my-5" animationDuration="1000ms" dynamicHeight>
     <mat-tab label="LogIn">
     <!-- <p>dsadasdasd</p> -->
