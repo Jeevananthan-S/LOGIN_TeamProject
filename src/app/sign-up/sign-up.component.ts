@@ -13,6 +13,7 @@ export class SignUpComponent {
   form: form = {} as form;
   // public password:string|number=this.form.password;
   isSame: boolean = false;
+  SameEmail:boolean=true;
   check() {
     this.isSame = this.form.password === this.form.confirmPassword ? true : false;
   }
@@ -33,4 +34,13 @@ export class SignUpComponent {
     this.form = {} as form;
     this.isSame = false;
   }
+
+  checkUnique(){
+    for (let x: number = 0; x < this.signUpData.length; x++){
+      if (this.form.email === this.signUpData[x].email) {
+        this.toast.error({detail:"Email ID Already Exist",summary:"Enter Different Email ID or Go to LogIN page",sticky:true,duration:3000});
+        this.SameEmail=false;
+      }
+  }
+}
 }

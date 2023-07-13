@@ -13,7 +13,7 @@
   
       <div class="email">
         <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input type="email" class="form-control" name="email" id="exampleInputEmail1" pattern="[a-z0-9]+@[a-z.]*"  [(ngModel)]="form.email" required>
+        <input type="email" class="form-control" name="email" id="exampleInputEmail1" pattern="[a-z0-9]+@[a-z.]*" (change)="checkUnique()"  [(ngModel)]="form.email" required>
       </div>
   
       <div class="password my-3">
@@ -42,7 +42,7 @@
   
       <div class="button my-3">
         <!--  jaiganesh 11/07/2023 created submit button  -->
-        <button type="button" *ngIf="Myform.valid && isSame" class="btn btn-success" (click)="createUser()">submit</button>
+        <button type="button" *ngIf="Myform.valid && isSame && SameEmail" class="btn btn-success" (click)="createUser()">submit</button>
       </div>
     </form>
   </section>
