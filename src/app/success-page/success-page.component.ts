@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./success-page.component.css']
 })
 export class SuccessPageComponent {
-
+  constructor(private router: Router){}
+navToHome(){
+  this.router.navigate(['']);
+}
 }

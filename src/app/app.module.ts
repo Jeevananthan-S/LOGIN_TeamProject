@@ -12,12 +12,14 @@ import { NgToastModule } from 'ng-angular-popup';
 import { SuccessPageComponent } from './success-page/success-page.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
+import { HomeComponentComponent } from './home-component/home-component.component';
 @NgModule({
   declarations: [
     AppComponent,
     SignUpComponent,
     LogInComponent,
     SuccessPageComponent,
+    HomeComponentComponent,
     
   ],
   imports: [
