@@ -34,6 +34,7 @@ export class SignUpComponent {
   createUser() {
     this.signUpData.push(this.form);
     console.log(this.signUpData);
+    
     this.toast.success({
       detail: 'SignedUp',
       summary:

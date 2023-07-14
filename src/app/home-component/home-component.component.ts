@@ -3,6 +3,7 @@ import { form } from '../type';
 import { logIn } from '../log-in/logIntype';
 import { NgToastService } from 'ng-angular-popup';
 import { Router } from '@angular/router';
+import { MatTabChangeEvent } from '@angular/material/tabs';
 @Component({
   selector: 'app-home-component',
   templateUrl: './home-component.component.html',
@@ -14,7 +15,11 @@ export class HomeComponentComponent {
   selectSignUp(){
     this.selectTab=1;
   }
-
+  tabChanged(tabChangeEvent: MatTabChangeEvent): void {
+    this.selectTab = tabChangeEvent.index;
+    console.log('tabChangeEvent => ', tabChangeEvent);
+    console.log('index => ', tabChangeEvent.index);
+  }
 
   signUpData: form[] = [];
 
@@ -23,6 +28,7 @@ export class HomeComponentComponent {
   storeData(signUp: form[]) {
     this.signUpData = signUp;
     console.log(this.signUpData[0].password);
+    this.selectTab=0;
   }
 public invalid:number=0;
 public invalidPassword:number=0;

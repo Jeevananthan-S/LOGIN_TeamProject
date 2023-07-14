@@ -1,5 +1,5 @@
 <section *ngIf="invalid === 0" class="container my-5 mainsec">
-    <mat-tab-group class="container my-5" animationDuration="1000ms" [selectedIndex]="selectTab" dynamicHeight>
+    <mat-tab-group class="container my-5" animationDuration="1000ms" (selectedTabChange)="tabChanged($event)" [selectedIndex]="selectTab" dynamicHeight>
       <mat-tab label="LogIn">
       <!-- <p>dsadasdasd</p> -->
       <div class="row">
@@ -9,7 +9,7 @@
         </div>
         <div class="col-6 my-5">
           <app-log-in (checkEvent)="present($event)"></app-log-in>
-          <p style="margin-left: 65%;color: blue;" (click)="selectSignUp()">SignUp Here</p>
+          <p class="signupMsg">If you have not registered , <span  (click)="selectSignUp()" class="signupMsg"> SignUp Here</span></p>
         </div>
       </div>
         <!-- <app-log-in (checkEvent)="present($event)"></app-log-in> -->
