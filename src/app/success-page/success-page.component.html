@@ -7,8 +7,13 @@
             <img src="../../assets/happyTeam.jpg" class="background" alt="sadas">
         </div>
         <div class="col-6">
-            <button (click)="navToHome()" class="btn btn-danger ">SignOut</button>
+            <!-- <button (click)="navToHome()" class="btn btn-danger ">SignOut</button> -->
+            <div class="example-button-container">
+                <button mat-fab (click)="navToHome()" color="warn" class="btn" aria-label="Example icon button with a home icon">
+                  <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="logout"></mat-icon>
 
+                </button>
+              </div>
         </div>
     </div>
 

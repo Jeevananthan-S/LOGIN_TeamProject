@@ -15,6 +15,7 @@ export class SignUpComponent {
 
   // regex: string = '[a-zA-Z. ]*';
   form: form = {} as form;
+  percent:number=0;
   // public password:string|number=this.form.password;
   isSame: boolean = false;
   SameEmail: boolean = true;
@@ -24,17 +25,19 @@ export class SignUpComponent {
   }
   checkPasswordMatch(){
     if(!this.isSame){
-      this.toast.error({detail:"Password Doesnot match",summary:"Enter Correct Confirm Password",duration:5000})
+      this.toast.error({detail:"Password Does not match",summary:"Enter Correct Confirm Password",duration:5000})
     }
   }
-  usernameValidate() {}
+  percentAdd() {
+    this.percent += 20;
+  }
 
   signUpData: form[] = [];
 
   createUser() {
     this.signUpData.push(this.form);
     console.log(this.signUpData);
-    
+
     this.toast.success({
       detail: 'SignedUp',
       summary:

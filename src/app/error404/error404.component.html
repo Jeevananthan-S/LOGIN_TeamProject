@@ -4,8 +4,12 @@
             <img src="../../assets/error.jpg" class="background" alt="">
         </div>
         <div class="col-6">
-            <button (click)="navToHome()" class="btn btn-dark ">Go back</button>
-    
+            <!-- <button  class="btn btn-dark ">Go back</button> -->
+            <div class="example-button-container">
+                <button mat-fab color="warn" (click)="navToHome()" class="btn" aria-label="Example icon button with a home icon">
+                  <mat-icon>home</mat-icon>
+                </button>
+              </div>
         </div>
     </div>
 </section>
