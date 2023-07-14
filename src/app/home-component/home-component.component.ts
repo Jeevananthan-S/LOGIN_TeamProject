@@ -9,6 +9,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./home-component.component.css']
 })
 export class HomeComponentComponent {
+  selectTab:number=0;
+
+  selectSignUp(){
+    this.selectTab=1;
+  }
+
 
   signUpData: form[] = [];
 
