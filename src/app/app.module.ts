@@ -13,6 +13,7 @@ import { SuccessPageComponent } from './success-page/success-page.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 import { HomeComponentComponent } from './home-component/home-component.component';
+import { Error404Component } from './error404/error404.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +21,7 @@ import { HomeComponentComponent } from './home-component/home-component.componen
     LogInComponent,
     SuccessPageComponent,
     HomeComponentComponent,
+    Error404Component,
     
   ],
   imports: [

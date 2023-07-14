@@ -11,6 +11,8 @@ import {MatButtonModule} from '@angular/material/button';
 })
 export class SignUpComponent {
   @Output() public dataEvent = new EventEmitter();
+  constructor(private toast: NgToastService,public dialog: MatDialog) {}
+
   // regex: string = '[a-zA-Z. ]*';
   form: form = {} as form;
   // public password:string|number=this.form.password;
@@ -26,7 +28,6 @@ export class SignUpComponent {
     }
   }
   usernameValidate() {}
-  constructor(private toast: NgToastService,public dialog: MatDialog) {}
 
   signUpData: form[] = [];
 

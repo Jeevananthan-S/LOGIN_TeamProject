@@ -4,10 +4,12 @@ import { LogInComponent } from './log-in/log-in.component';
 import {  SignUpComponent } from './sign-up/sign-up.component';
 import { SuccessPageComponent } from './success-page/success-page.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
+import { Error404Component } from './error404/error404.component';
 const routes: Routes = [
   {path:'', component : HomeComponentComponent},
   // {path:'sign-up-component', component : SignUpComponent}
-  {path:'successPage' , component : SuccessPageComponent}
+  {path:'successPage' , component : SuccessPageComponent},
+  {path: '**' , component : Error404Component}
 
 ];
 
