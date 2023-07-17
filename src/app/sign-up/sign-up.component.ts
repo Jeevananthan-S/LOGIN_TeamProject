@@ -72,7 +72,10 @@ export class SignUpComponent {
   }
 
   openDialog() {
-    this.dialog.open(TermsCondition);
+    console.log(this.form.checked);
+    
+    if(this.form.checked==false || this.form.checked==undefined){
+    this.dialog.open(TermsCondition);}
   }
 }
 
