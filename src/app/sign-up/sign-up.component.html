@@ -48,9 +48,9 @@
       <div class="terms">
         <!--   jaiganesh 11/07/2023 created checkbox tag -->
         <div class="form-check">
-          <input class="form-check-input"  [(ngModel)]="form.checked" name="TandC" (click)="openDialog();percentAdd();" type="checkbox"  id="flexCheckDefault"  required > 
+          <input class="form-check-input"  [(ngModel)]="form.tick" name="TandC" (change)="openDialog();percentAdd();" type="checkbox"  id="flexCheckDefault"  required  > 
           <label class="form-check-label" for="flexCheckDefault" >
-            Terms and conditions
+            Terms and conditions 
           </label>
         </div>
       </div>

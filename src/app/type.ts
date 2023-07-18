@@ -3,5 +3,5 @@ export interface form{
     email:string|number,
     password : string | number,
     confirmPassword : string | number
-    checked : boolean
+    tick : boolean
 }

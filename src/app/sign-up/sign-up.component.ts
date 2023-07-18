@@ -1,8 +1,8 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { form } from '../type';
 import { NgToastService } from 'ng-angular-popup';
-import {MatDialog, MatDialogModule} from '@angular/material/dialog';
-import {MatButtonModule} from '@angular/material/button';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-sign-up',
@@ -11,11 +11,11 @@ import {MatButtonModule} from '@angular/material/button';
 })
 export class SignUpComponent {
   @Output() public dataEvent = new EventEmitter();
-  constructor(private toast: NgToastService,public dialog: MatDialog) {}
+  constructor(private toast: NgToastService, public dialog: MatDialog) { }
 
   // regex: string = '[a-zA-Z. ]*';
   form: form = {} as form;
-  percent:number=0;
+  percent: number = 0;
   // public password:string|number=this.form.password;
   isSame: boolean = false;
   SameEmail: boolean = true;
@@ -23,9 +23,9 @@ export class SignUpComponent {
     this.isSame =
       this.form.password === this.form.confirmPassword ? true : false;
   }
-  checkPasswordMatch(){
-    if(!this.isSame){
-      this.toast.error({detail:"Password Does not match",summary:"Enter Correct Confirm Password",duration:5000})
+  checkPasswordMatch() {
+    if (!this.isSame) {
+      this.toast.error({ detail: "Password Does not match", summary: "Enter Correct Confirm Password", duration: 5000 })
     }
   }
   percentAdd() {
@@ -65,17 +65,18 @@ export class SignUpComponent {
         this.SameEmail = false;
         this.resetForm();
       }
-      else{
-        this.SameEmail=true;
+      else {
+        this.SameEmail = true;
       }
     }
   }
 
   openDialog() {
-    console.log(this.form.checked);
-    
-    if(this.form.checked==false || this.form.checked==undefined){
-    this.dialog.open(TermsCondition);}
+    console.log(this.form.tick);
+
+    if (this.form.tick) {
+      this.dialog.open(TermsCondition);
+    }
   }
 }
 
@@ -87,4 +88,4 @@ export class SignUpComponent {
   standalone: true,
   imports: [MatDialogModule, MatButtonModule],
 })
-export class TermsCondition {}
+export class TermsCondition { }
