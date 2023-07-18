@@ -52,7 +52,7 @@ public invalidPassword:number=0;
       } 
     }
     if(this.invalid===0 && this.invalidPassword===0){
-      this.toast.info({detail:"You need to SignUp in order to LogIn",summary:'Before logging you need to signup!!',duration:3000});
+      this.toast.warning({detail:"You need to SignUp in order to LogIn",summary:'Before logging you need to signup!!',duration:3000});
     }
     this.invalid=0;
     this.invalidPassword=0;
